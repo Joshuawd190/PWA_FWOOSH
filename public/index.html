@@ -60,9 +60,9 @@
 
   <script>
     (function () {
-      if ('serviceWorker' in navigator) {
+      if ('service-worker' in navigator) {
         navigator.serviceWorker
-          .register('./serviceWorker.js')
+          .register('./service-worker.js')
           .then(() => console.log('Service Worker registered successfully.'))
           .catch((error) =>
             console.log('Service Worker registration failed: ', error)
