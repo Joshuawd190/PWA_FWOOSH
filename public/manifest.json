@@ -43,7 +43,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "index.html",
+  "start_url": "https://serene-citadel-84717.herokuapp.com/",
+  "scope": "/",
   "display": "standalone",
   "theme_color": "#317EFB",
   "background_color": "#ffffff"

@@ -16,6 +16,7 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="manifest" href="manifest.json" />
 
     <title>Budget Tracker</title>
   </head>
@@ -56,9 +57,20 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="js/index.js"></script>
     <script src="js/idb.js"></script>
+    <script>
+      if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker
+          .register('/service-worker.js')
+          .then(function (reg) {
+            console.log(
+              'Service worker has been registered for scope: ' + reg.scope
+            );
+          });
+      }
+    </script>
   </body>
 
-  <script>
+  <!-- <script>
     (function () {
       if ('service-worker' in navigator) {
         navigator.serviceWorker
@@ -69,5 +81,5 @@
           );
       }
     });
-  </script>
+  </script> -->
 </html>
