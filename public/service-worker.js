@@ -1,7 +1,7 @@
 const isLocalhost = Boolean(
-  window.location.hostname === 'localhost' ||
-    window.location.hostname === '[::1]' ||
-    window.location.hostname.match(
+  self.location.hostname === 'localhost' ||
+    self.location.hostname === '[::1]' ||
+    self.location.hostname.match(
       /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
     )
 );
@@ -10,6 +10,7 @@ const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION;
 
 const FILES_TO_CACHE = [
+  '/',
   './index.html',
   './css/styles.css',
   './js/index.js',
